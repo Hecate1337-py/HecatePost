@@ -1,3 +1,6 @@
+![MIT License](https://img.shields.io/github/license/Hecate1337-py/HecatePost)
+![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
+![Status](https://img.shields.io/badge/status-stable-brightgreen)
 
 # HecatePost 🔮
 
