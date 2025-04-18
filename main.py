@@ -163,10 +163,10 @@ def run_posting():
                 if f.lower().endswith(('.jpg', '.jpeg', '.png'))
             ])
             for idx, img in enumerate(images):
-                if is_already_posted(posted, os.path.basename(img)): continue
+                if is_already_posted(posted, os.path.basename(img)):
+                    continue
                 caption = f"{captions[idx] if idx < len(captions) else ''}\n\n{HASHTAGS}"
                 post_image(pid, token, img, caption, posted_img)
-                break
 
         if mode in ["2", "3"]:
             posted = load_posted(posted_vid)
@@ -175,12 +175,12 @@ def run_posting():
                 for f in os.listdir(VIDEOS_FOLDER)
                 if f.lower().endswith(('.mp4', '.mov', '.avi'))
             ])
-            for vid in videos:
-                if is_already_posted(posted, os.path.basename(vid)): continue
+            for idx, vid in enumerate(videos):
+                if is_already_posted(posted, os.path.basename(vid)):
+                    continue
                 title = os.path.splitext(os.path.basename(vid))[0].replace("_", " ")
                 caption = f"🎬 {title}\n\n{HASHTAGS}"
                 post_video(pid, token, vid, caption, posted_vid)
-                break
 
 # === MENU AWAL ===
 def main():
